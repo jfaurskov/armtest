@@ -1,0 +1,51 @@
+﻿{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VirtualMachineName": {
+            "value": "armtest"
+        },
+        "VMadminUsername": {
+            "value": "jan"
+        },
+        "VMadminPassword": {
+            "value": "Qwsd123456789qwsd"
+        },
+        "windowsOSVersion": {
+            "value": "2012-R2-Datacenter"
+        },
+        "SizeOfDataDisksInGB": {
+            "value": "512"
+        },
+        "DiskCaching": {
+            "value": "ReadWrite"
+        },
+        "StorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "ExistingSubnetName": {
+            "value": "armsubnet"
+        },
+        "ExistingvirtualNetworkName": {
+            "value": "vnet01"
+        },
+        "VirtualMachineSize": {
+            "value": "Standard_D2"
+        },
+        "VirtualMachineIP": {
+            "value": "10.0.1.15"
+        },
+        "StorageAccountName": {
+            "value": "armtest239032"
+        },
+        "ExistingVirtualNetworkResourceGroup": {
+            "value": "Puppeteer"
+        },
+        "Location": {
+            "value": "West Europe"
+        },
+        "numDataDisks": {
+            "value": 1
+        }
+    }
+}
