@@ -23,7 +23,7 @@
         "StorageAccountType": {
             "value": "Standard_LRS"
         },
-        "ExistingSubnetName": {
+        "SubnetName": {
             "value": "LAN-Subnet-02"
         },
         "ExistingvirtualNetworkName": {
