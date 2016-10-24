@@ -8,13 +8,13 @@
             "description": "Name of the VNET to add a subnet to"
         }
     },
-    "newSubnetName": {
+    "SubnetName": {
       "type": "string",
       "metadata": {
         "description": "Name of the subnet to add"
       }
     },
-    "newSubnetAddressPrefix": {
+    "SubnetAddressPrefix": {
       "type": "string",
       "metadata": {
         "description": "Address space of the subnet to add"
@@ -28,21 +28,21 @@
     {
       "apiVersion": "[variables('apiVersion')]",
       "type": "Microsoft.Network/virtualNetworks/subnets",
-      "name": "[concat(parameters('ExistingvirtualNetworkName'), '/', parameters('newSubnetName'))]",
+      "name": "[concat(parameters('ExistingvirtualNetworkName'), '/', parameters('SubnetName'))]",
       "location": "[resourceGroup().location]",
       "properties": {
-        "addressPrefix": "[parameters('newSubnetAddressPrefix')]"
+        "addressPrefix": "[parameters('SubnetAddressPrefix')]"
       }
     }
   ],
     "outputs": {
         "resultsaddressPrefix": {
             "type": "string",
-            "value": "[parameters('newSubnetAddressPrefix')]"
+            "value": "[parameters('SubnetAddressPrefix')]"
         },
         "resultsSubnetName": {
             "type": "string",
-            "value": "[parameters('newSubnetName')]"
+            "value": "[parameters('SubnetName')]"
         }
 
     }

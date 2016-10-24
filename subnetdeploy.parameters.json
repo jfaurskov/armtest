@@ -5,10 +5,10 @@
     "ExistingvirtualNetworkName": {
       "value": "vnet01"
     },
-    "newSubnetName": {
+    "SubnetName": {
       "value": "armsubnet"
     },
-    "newSubnetAddressPrefix": {
+    "SubnetAddressPrefix": {
       "value": "10.0.1.0/24"
     }
   }
