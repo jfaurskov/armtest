@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+  "parameters": {
+    "Active_Directory_Domain_Join.domainName": {
+      "type": "string",
+      "defaultValue": "rr"
+    },
+    "Active_Directory_Domain_Join.domainOU": {
+      "type": "string",
+      "defaultValue": "rrr"
+    },
+    "Active_Directory_Domain_Join.domainJoinUser": {
+      "type": "string",
+      "defaultValue": "rrr"
+    },
+    "Active_Directory_Domain_Join.domainJoinUserPassword": {
+      "type": "securestring",
+      "defaultValue": "[[[LadmPwd]]"
+    },
+    "Active_Directory_Domain_Join.domainJoinOptions": {
+      "type": "string",
+      "defaultValue": "3"
+    }
+  },
+  "variables": {
+      },
+  "resources": [
+    {
+      "properties": {
+        "artifacts": [
+          {
+            "artifactId": "[resourceId('Microsoft.DevTestLab/labs/artifactSources/artifacts', parameters('labName'), 'public repo', 'windows-domain-join')]",
+            "parameters": [
+              {
+                "name": "domainName",
+                "value": "[parameters('Active_Directory_Domain_Join.domainName')]"
+              },
+              {
+                "name": "domainOU",
+                "value": "[parameters('Active_Directory_Domain_Join.domainOU')]"
+              },
+              {
+                "name": "domainJoinUser",
+                "value": "[parameters('Active_Directory_Domain_Join.domainJoinUser')]"
+              },
+              {
+                "name": "domainJoinUserPassword",
+                "value": "[parameters('Active_Directory_Domain_Join.domainJoinUserPassword')]"
+              },
+              {
+                "name": "domainJoinOptions",
+                "value": "[parameters('Active_Directory_Domain_Join.domainJoinOptions')]"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+ 
+}
