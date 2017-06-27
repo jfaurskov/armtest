@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+  "parameters": {
+  },
+  "variables": {
+      },
+  "resources": [
+    {
+      "properties": {
+        "artifacts": [
+          {
+            "artifactId": "[resourceId('Microsoft.DevTestLab/labs/artifactSources/artifacts', parameters('labName'), 'public repo', 'windows-enable-local-admins')]"
+          }
+        ]
+      }
+    }
+  ]
+ 
+}
